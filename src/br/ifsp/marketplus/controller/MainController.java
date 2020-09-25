@@ -1,7 +1,5 @@
 package br.ifsp.marketplus.controller;
 
-import br.ifsp.marketplus.Main;
-import br.ifsp.marketplus.model.EarningsModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -22,6 +20,7 @@ public class MainController {
     private JFXButton newOrderButton;
     @FXML
     private JFXButton orderButton;
+
     @FXML
     private Text dailyEarning;
     @FXML
@@ -46,22 +45,15 @@ public class MainController {
         stage.setTitle("Produtos");
         stage.setScene(scene);
         stage.show();
-
     }
 
     @FXML
     void clickSet(MouseEvent event) {
-        EarningsModel earningsModel = Main.getInitializer().getEarningsModel();
-
-        earningsModel.addDaily(10.1);
-        earningsModel.addWeekly(100.12);
-        earningsModel.addMonthly(1000.19);
-
         DecimalFormat decimalFormat = new DecimalFormat("#,###.##");
 
-        dailyEarning.setText("R$ " + decimalFormat.format(earningsModel.getDaily()));
-        weeklyEarning.setText("R$ " + decimalFormat.format(earningsModel.getWeekly()));
-        monthlyEarning.setText("R$ " + decimalFormat.format(earningsModel.getMonthly()));
+        dailyEarning.setText("R$ " + decimalFormat.format(1));
+        weeklyEarning.setText("R$ " + decimalFormat.format(423));
+        monthlyEarning.setText("R$ " + decimalFormat.format(6421));
 
     }
 

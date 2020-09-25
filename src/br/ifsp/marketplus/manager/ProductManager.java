@@ -1,29 +1,31 @@
 package br.ifsp.marketplus.manager;
 
-import br.ifsp.marketplus.model.ProductModel;
+import br.ifsp.marketplus.model.Product;
 import lombok.Getter;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class ProductManager {
 
     @Getter
-    private List<ProductModel> productModels = new ArrayList<>();
+    private final List<Product> products = new ArrayList<>();
 
-    public ProductModel getProduct(int id) {
-        if (productModels.isEmpty()) return null;
+    public Product getProduct(UUID id) {
+        if (products.isEmpty()) return null;
 
-        for (ProductModel productModel : productModels) {
+        for (Product productModel : products) {
             if (productModel.getId() == id) return productModel;
         }
+
         return null;
     }
 
-    public ProductModel getProduct(String name) {
-        if (productModels.isEmpty()) return null;
+    public Product getProduct(String name) {
+        if (products.isEmpty()) return null;
 
-        for (ProductModel productModel : productModels) {
+        for (Product productModel : products) {
             if (productModel.getName().equalsIgnoreCase(name)) return productModel;
         }
         return null;
