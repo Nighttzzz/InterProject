@@ -1,5 +1,6 @@
 package br.ifsp.marketplus.initializer;
 
+import br.ifsp.marketplus.dao.impl.CategoryDao;
 import br.ifsp.marketplus.dao.impl.ProductDao;
 import br.ifsp.marketplus.manager.ProductManager;
 import br.ifsp.marketplus.model.EarningsModel;
@@ -15,6 +16,7 @@ public class Initializer {
     private Connection connection;
 
     private ProductDao productDao;
+    private CategoryDao categoryDao;
 
     private EarningsModel earningsModel;
     private ProductManager productManager;
@@ -24,6 +26,9 @@ public class Initializer {
 
         productDao = new ProductDao(connection);
         productDao.createTable();
+
+        categoryDao = new CategoryDao(connection);
+        categoryDao.createTable();
 
         earningsModel = EarningsModel.builder()
               .daily(0)

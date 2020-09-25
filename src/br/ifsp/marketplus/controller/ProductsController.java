@@ -46,6 +46,14 @@ public class ProductsController {
         productModels.add(productModel);
         Main.getInitializer().getProductDao().insertOrUpdate(productModel);
 
+        refreshProductListView();
+    }
+
+    private void refreshProductListView() {
+
+        ProductManager productManager = Main.getInitializer().getProductManager();
+        List<ProductModel> productModels = productManager.getProductModels();
+
         ObservableList<String> items = FXCollections.observableArrayList();
 
         for (ProductModel model : productModels) {
@@ -53,6 +61,7 @@ public class ProductsController {
         }
 
         productsList.setItems(items);
+
     }
 
 }
