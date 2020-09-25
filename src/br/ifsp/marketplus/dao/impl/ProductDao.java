@@ -24,11 +24,10 @@ public class ProductDao implements DaoInterface<ProductModel> {
         try (PreparedStatement statement = connection.prepareStatement(
               "CREATE TABLE IF NOT EXISTS `products` (" +
                     "product_id   INTEGER NOT NULL, " +
-                    "category_id  INTEGER NOT NULL, " +
                     "name         CHAR(36) NOT NULL, " +
                     "price        DOUBLE NOT NULL, " +
                     "discount     DOUBLE NOT NULL, " +
-                    "PRIMARY KEY  (id));"
+                    "PRIMARY KEY  (product_id));"
         )) {
             statement.executeUpdate();
 
@@ -47,7 +46,7 @@ public class ProductDao implements DaoInterface<ProductModel> {
 
             while (resultSet.next()) {
                 ProductModel product = ProductModel.builder()
-                      .id(resultSet.getInt("id"))
+                      .id(resultSet.getInt("product_id"))
                       .name(resultSet.getString("name"))
                       .price(resultSet.getDouble("price"))
                       .discount(resultSet.getDouble("discount"))
@@ -64,8 +63,7 @@ public class ProductDao implements DaoInterface<ProductModel> {
 
     public void insertOrUpdate(ProductModel model) {
         try(PreparedStatement statement = connection.prepareStatement(
-              "INSERT INTO `products` VALUES (?, ?, ?, ?, ?) " +
-                    "ON DUPLICATE KEY UPDATE amount=?;"
+              "INSERT INTO `products` VALUES (?, ?, ?, ?) "
         )) {
             statement.setString(1, String.valueOf(model.getId()));
             statement.setString(2, model.getName());

@@ -20,5 +20,14 @@ public class ProductManager {
         return null;
     }
 
+    public ProductModel getProduct(String name) {
+        if (productModels.isEmpty()) return null;
+
+        for (ProductModel productModel : productModels) {
+            if (productModel.getName().equalsIgnoreCase(name)) return productModel;
+        }
+        return null;
+    }
+
 
 }
