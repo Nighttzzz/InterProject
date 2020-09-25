@@ -1,9 +1,11 @@
 package br.ifsp.marketplus.initializer;
 
-import br.ifsp.marketplus.dao.impl.CategoryDao;
-import br.ifsp.marketplus.dao.impl.ProductDao;
+import br.ifsp.marketplus.manager.OrderManager;
+import br.ifsp.marketplus.storage.category.CategoryDao;
+import br.ifsp.marketplus.storage.client.ClientDao;
+import br.ifsp.marketplus.storage.order.OrderDao;
+import br.ifsp.marketplus.storage.product.ProductDao;
 import br.ifsp.marketplus.manager.ProductManager;
-import br.ifsp.marketplus.model.EarningsModel;
 import lombok.Getter;
 
 import java.sql.Connection;
@@ -17,9 +19,11 @@ public class Initializer {
 
     private ProductDao productDao;
     private CategoryDao categoryDao;
+    private OrderDao orderDao;
+    private ClientDao clientDao;
 
-    private EarningsModel earningsModel;
     private ProductManager productManager;
+    private OrderManager orderManager;
 
     public void onEnable() {
         initConnection();
@@ -30,15 +34,13 @@ public class Initializer {
         categoryDao = new CategoryDao(connection);
         categoryDao.createTable();
 
-        earningsModel = EarningsModel.builder()
-              .daily(0)
-              .weekly(0)
-              .monthly(0)
-              .build();
+        clientDao = new ClientDao(connection);
+
+        orderDao = new OrderDao(connection);
+        orderManager = new OrderManager();
 
         productManager = new ProductManager();
-        productManager.getProductModels().addAll(productDao.getAll());
-
+        productManager.getProducts().addAll(productDao.getAll());
     }
 
     private void initConnection() {

@@ -3,7 +3,7 @@ package br.ifsp.marketplus.controller;
 
 import br.ifsp.marketplus.Main;
 import br.ifsp.marketplus.manager.ProductManager;
-import br.ifsp.marketplus.model.ProductModel;
+import br.ifsp.marketplus.model.Product;
 import com.jfoenix.controls.JFXListView;
 import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
@@ -11,8 +11,8 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
 
-import javax.swing.text.html.ListView;
 import java.util.List;
+import java.util.UUID;
 
 public class ProductsController {
 
@@ -20,48 +20,44 @@ public class ProductsController {
     private JFXTextField productName;
     @FXML
     private JFXTextField productPrice;
+
+    // ae macaco coloca um baguio de escolhe categoria
+
     @FXML
     private JFXListView<String> productsList;
 
     @FXML
     void createProduct(MouseEvent event) {
-
         ProductManager productManager = Main.getInitializer().getProductManager();
-        List<ProductModel> productModels = productManager.getProductModels();
+        List<Product> products = productManager.getProducts();
 
         String name = productName.getCharacters().toString();
-        String price = productPrice.getCharacters().toString();
+        String rawPrice = productPrice.getCharacters().toString();
 
-        if (name.length() == 0) return;
-        if (productManager.getProduct(name) != null) return;
-        if (price.length() == 0) return;
+        if (name.length() == 0 || productManager.getProduct(name) != null
+          || rawPrice.length() == 0) return;
 
-        ProductModel productModel = ProductModel.builder()
-              .id(productModels.size() + 1)
-              .name(name)
-              .discount(0)
-              .price(Double.parseDouble(price))
-              .build();
+        double price = Double.parseDouble(rawPrice);
 
-        productModels.add(productModel);
-        Main.getInitializer().getProductDao().insertOrUpdate(productModel);
+        Product product = new Product(UUID.randomUUID(), UUID.randomUUID(), name, 0, price);
+        products.add(product);
+
+        Main.getInitializer().getProductDao().insertOrUpdate(product.getId(), product);
 
         refreshProductListView();
     }
 
     private void refreshProductListView() {
-
         ProductManager productManager = Main.getInitializer().getProductManager();
-        List<ProductModel> productModels = productManager.getProductModels();
+        List<Product> products = productManager.getProducts();
 
         ObservableList<String> items = FXCollections.observableArrayList();
 
-        for (ProductModel model : productModels) {
-            items.add(model.getName());
+        for (Product product : products) {
+            items.add(product.getName());
         }
 
         productsList.setItems(items);
-
     }
 
 }

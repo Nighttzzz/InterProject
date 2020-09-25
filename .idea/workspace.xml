@@ -1,16 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="#1 ProductDao updates">
-      <change afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/dao/impl/CategoryDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/manager/OrderManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/model/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/model/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/model/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/model/OrderProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/storage/Dao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/storage/SQLAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/storage/category/CategoryAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/storage/category/CategoryDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/storage/client/ClientAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/storage/client/ClientDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/storage/order/OrderAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/storage/order/OrderDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/storage/order/OrderProductAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/storage/product/ProductAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/storage/product/ProductDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Interdisciplinary Project/br/ifsp/marketplus/controller/ProductsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Interdisciplinary Project/br/ifsp/marketplus/controller/ProductsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Interdisciplinary Project/br/ifsp/marketplus/dao/impl/ProductDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Interdisciplinary Project/br/ifsp/marketplus/dao/impl/ProductDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Interdisciplinary Project/br/ifsp/marketplus/initializer/Initializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Interdisciplinary Project/br/ifsp/marketplus/initializer/Initializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Interdisciplinary Project/br/ifsp/marketplus/manager/ProductManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Interdisciplinary Project/br/ifsp/marketplus/manager/ProductManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Interdisciplinary Project/br/ifsp/marketplus/views/products.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Interdisciplinary Project/br/ifsp/marketplus/views/products.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interdisciplinary Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Interdisciplinary Project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interdisciplinary Project/META-INF/Interdisciplinary Project.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interdisciplinary Project/br/ifsp/marketplus/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interdisciplinary Project/br/ifsp/marketplus/controller/MainController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interdisciplinary Project/br/ifsp/marketplus/controller/ProductsController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interdisciplinary Project/br/ifsp/marketplus/dao/DaoInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interdisciplinary Project/br/ifsp/marketplus/dao/impl/ProductDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interdisciplinary Project/br/ifsp/marketplus/initializer/Initializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interdisciplinary Project/br/ifsp/marketplus/manager/ProductManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interdisciplinary Project/br/ifsp/marketplus/model/CategoryModel$CategoryModelBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interdisciplinary Project/br/ifsp/marketplus/model/CategoryModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interdisciplinary Project/br/ifsp/marketplus/model/ClientModel$ClientModelBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interdisciplinary Project/br/ifsp/marketplus/model/ClientModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interdisciplinary Project/br/ifsp/marketplus/model/EarningsModel$EarningsModelBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interdisciplinary Project/br/ifsp/marketplus/model/EarningsModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interdisciplinary Project/br/ifsp/marketplus/model/OrderModel$OrderModelBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interdisciplinary Project/br/ifsp/marketplus/model/OrderModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interdisciplinary Project/br/ifsp/marketplus/model/ProductModel$ProductModelBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interdisciplinary Project/br/ifsp/marketplus/model/ProductModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interdisciplinary Project/br/ifsp/marketplus/views/main.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interdisciplinary Project/br/ifsp/marketplus/views/products.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ifsp/marketplus/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/ifsp/marketplus/controller/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/controller/ProductsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ifsp/marketplus/dao/DaoInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ifsp/marketplus/dao/impl/CategoryDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ifsp/marketplus/dao/impl/ProductDao.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/ifsp/marketplus/initializer/Initializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/initializer/Initializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ifsp/marketplus/manager/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/manager/ProductManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ifsp/marketplus/model/CategoryModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ifsp/marketplus/model/ClientModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ifsp/marketplus/model/EarningsModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ifsp/marketplus/model/OrderModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ifsp/marketplus/model/ProductModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ifsp/marketplus/views/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/views/main.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,13 +112,11 @@
     <ui_properties converted="true" />
     <breakpoint_rules converted="true" />
   </component>
-  <component name="FavoritesManager">
-    <favorites_list name="JavaFxApplication" />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -85,7 +137,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -96,17 +147,26 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/mysql-connector-java-8.0.13.jar!/" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/br/ifsp/marketplus/storage/order" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kaue\IdeaProjects\projeto do luper\src\br\ifsp\marketplus\storage\order" />
+      <recent name="C:\Users\kaue\IdeaProjects\projeto do luper\src\br\ifsp\marketplus\storage\client" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.ifsp.marketplus.manager" />
       <recent name="br.ifsp.marketplus.dao.impl" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -162,6 +222,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -194,6 +265,7 @@
       </method>
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -205,6 +277,7 @@
       <option name="presentableId" value="Default" />
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
+      <workItem from="1601053532849" duration="6837000" />
     </task>
     <task id="LOCAL-00001" summary="#1 ProductDao updates">
       <created>1601015098847</created>
@@ -216,8 +289,19 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1302000" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
@@ -226,22 +310,30 @@
     <option name="LAST_COMMIT_MESSAGE" value="#1 ProductDao updates" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="27" key="#Project_Structure" timestamp="1600999687536">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="550" y="59" key="#Java" timestamp="1601054433130">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="550" y="59" key="#Java/0.0.1920.1040/-1366.0.1366.728@0.0.1920.1040" timestamp="1601054433130" />
+    <state x="387" y="38" key="#Project_Structure" timestamp="1601053957244">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="275" y="27" key="#Project_Structure/0.0.1366.738@0.0.1366.738" timestamp="1600999687536" />
-    <state x="488" y="72" key="#com.intellij.ide.util.MemberChooser" timestamp="1600996033601">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="387" y="38" key="#Project_Structure/0.0.1920.1040/-1366.0.1366.728@0.0.1920.1040" timestamp="1601053957244" />
+    <state x="686" y="101" key="#com.intellij.ide.util.MemberChooser" timestamp="1601058319979">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="488" y="72" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1600996033601" />
-    <state x="437" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1600995712564">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="686" y="101" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1366.0.1366.728@0.0.1920.1040" timestamp="1601058319979" />
+    <state x="614" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1601054939199">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="437" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.738@0.0.1366.738" timestamp="1600995712564" />
-    <state x="413" y="115" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600993121431">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="614" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/-1366.0.1366.728@0.0.1920.1040" timestamp="1601054939199" />
+    <state x="580" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601054378202">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="413" y="115" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1600993121431" />
+    <state x="580" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1366.0.1366.728@0.0.1920.1040" timestamp="1601054378202" />
     <state x="413" y="123" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1600889862080">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -250,10 +342,11 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="264" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1601015094811" />
-    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1600999684143">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="631" y="316" key="FileChooserDialogImpl" timestamp="1601053953721">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1600999684143" />
+    <state x="631" y="316" key="FileChooserDialogImpl/0.0.1920.1040/-1366.0.1366.728@0.0.1920.1040" timestamp="1601053953721" />
     <state width="1322" height="125" key="GridCell.Tab.0.bottom" timestamp="1601047907082">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -270,10 +363,11 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1322" height="125" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1601047907082" />
-    <state x="129" y="0" key="SettingsEditor" timestamp="1600988788200">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="181" y="0" key="SettingsEditor" timestamp="1601056047425">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="129" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1600988788200" />
+    <state x="181" y="0" key="SettingsEditor/0.0.1920.1040/-1366.0.1366.728@0.0.1920.1040" timestamp="1601056047425" />
     <state x="490" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601015143691">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
