@@ -21,7 +21,6 @@ public class ProductsController {
     @FXML
     private JFXTextField productPrice;
 
-    // ae macaco coloca um baguio de escolhe categoria
 
     @FXML
     private JFXListView<String> productsList;

@@ -76,6 +76,33 @@ public class OrderDao implements Dao<UUID, Order> {
         }
     }
 
+    @Override
+    public void deleteFromId(UUID key, Order order) {
+        try (PreparedStatement statement = connection.prepareStatement(
+              "DELETE FROM `orders` WHERE id = ?;"
+        )) {
+            adapter.delete(statement, order);
+
+            statement.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        for (OrderProduct product : order.getProducts()) {
+            try (PreparedStatement statement = connection.prepareStatement(
+                  "DELETE FROM `order_products` WHERE product_id = ?;"
+            )) {
+                productAdapter.delete(statement, product);
+
+                statement.executeUpdate();
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
     public Collection<Order> getAll() {
         Set<Order> orders = new HashSet<>();
 

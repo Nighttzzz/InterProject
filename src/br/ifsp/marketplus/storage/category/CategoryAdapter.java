@@ -35,4 +35,9 @@ public class CategoryAdapter implements SQLAdapter<Category> {
         statement.setString(1, category.getId().toString());
         statement.setString(2, category.getName());
     }
+
+    @Override
+    public void delete(PreparedStatement statement, Category category) throws SQLException {
+        statement.setString(1, category.getId().toString());
+    }
 }

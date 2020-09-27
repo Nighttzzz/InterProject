@@ -9,4 +9,7 @@ public interface SQLAdapter<T> {
     T read(ResultSet set) throws SQLException;
 
     void insert(PreparedStatement statement, T object) throws SQLException;
+
+    void delete(PreparedStatement statement, T object) throws SQLException;
+
 }

@@ -49,6 +49,20 @@ public class CategoryDao implements Dao<UUID, Category> {
         }
     }
 
+    @Override
+    public void deleteFromId(UUID key, Category category) {
+        try (PreparedStatement statement = connection.prepareStatement(
+              "DELETE FROM `categories` WHERE id = ?;"
+        )) {
+            adapter.delete(statement, category);
+
+            statement.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public Collection<Category> getAll() {
         Set<Category> categories = new HashSet<>();
 
@@ -59,7 +73,7 @@ public class CategoryDao implements Dao<UUID, Category> {
             "products.id AS p_id, " +
             "products.name AS p_name, " +
             "products.price AS p_price, " +
-            "products.discount AS p_discount, " +
+            "products.discount AS p_discount " +
             "FROM `categories` " +
             "INNER JOIN products ON categories.id = products.category_id;"
         )) {

@@ -52,6 +52,20 @@ public class ProductDao implements Dao<UUID, Product> {
     }
 
     @Override
+    public void deleteFromId(UUID key, Product model) {
+        try (PreparedStatement statement = connection.prepareStatement(
+              "DELETE FROM `products` WHERE id = ?;"
+        )) {
+            adapter.delete(statement, model);
+
+            statement.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
     public Collection<Product> getAll() {
         throw new UnsupportedOperationException("Method not implemented");
     }

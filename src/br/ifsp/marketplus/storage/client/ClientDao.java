@@ -52,6 +52,20 @@ public class ClientDao implements Dao<UUID, Client> {
         }
     }
 
+    @Override
+    public void deleteFromId(UUID key, Client client) {
+        try (PreparedStatement statement = connection.prepareStatement(
+              "DELETE FROM `clients` WHERE id = ?;"
+        )) {
+            adapter.delete(statement, client);
+
+            statement.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public Collection<Client> getAll() {
         Set<Client> clients = new HashSet<>();
 

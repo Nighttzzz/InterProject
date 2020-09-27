@@ -33,4 +33,9 @@ public class ProductAdapter implements SQLAdapter<Product> {
         statement.setDouble(5, product.getPrice());
         statement.setDouble(6, product.getDiscount());
     }
+
+    @Override
+    public void delete(PreparedStatement statement, Product object) throws SQLException {
+        statement.setString(1, object.getId().toString());
+    }
 }

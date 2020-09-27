@@ -41,4 +41,9 @@ public class OrderAdapter implements SQLAdapter<Order> {
         statement.setDouble(3, order.getTotalPrice());
         statement.setLong(4, order.getEmittedDate());
     }
+
+    @Override
+    public void delete(PreparedStatement statement, Order order) throws SQLException {
+        statement.setString(1, order.getId().toString());
+    }
 }

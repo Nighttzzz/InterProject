@@ -8,6 +8,8 @@ public interface Dao<K, V> {
 
     void insertOrUpdate(K key, V model);
 
+    void deleteFromId(K key, V model);
+
     Collection<V> getAll();
 
 }

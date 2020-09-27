@@ -34,4 +34,9 @@ public class ClientAdapter implements SQLAdapter<Client> {
         statement.setInt(4, client.getCpf());
         statement.setLong(5, client.getCreatedAt());
     }
+
+    @Override
+    public void delete(PreparedStatement statement, Client client) throws SQLException {
+        statement.setString(1, client.getId().toString());
+    }
 }
