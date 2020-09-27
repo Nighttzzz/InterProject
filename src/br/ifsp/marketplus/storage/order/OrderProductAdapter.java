@@ -25,4 +25,9 @@ public class OrderProductAdapter implements SQLAdapter<OrderProduct> {
         statement.setString(2, object.getOrderId().toString());
         statement.setInt(3, object.getAmount());
     }
+
+    @Override
+    public void delete(PreparedStatement statement, OrderProduct object) throws SQLException {
+        statement.setString(1, object.getOrderId().toString()
+    }
 }
