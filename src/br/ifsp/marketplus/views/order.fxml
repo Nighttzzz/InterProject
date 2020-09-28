@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane onMouseEntered="#refresh" prefHeight="400.0" prefWidth="382.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ifsp.marketplus.controller.OrderController">
+   <children>
+      <JFXListView fx:id="orderList" layoutX="21.0" layoutY="17.0" prefHeight="366.0" prefWidth="200.0" />
+      <AnchorPane layoutX="221.0" prefHeight="400.0" prefWidth="161.0">
+         <children>
+            <JFXButton layoutX="9.0" layoutY="327.0" onMouseClicked="#createOrder" prefHeight="29.0" prefWidth="143.0" ripplerFill="#006f0d" style="-fx-background-color: #7dff8a; -fx-background-radius: 5;" text="CRIAR COMPRA">
+               <font>
+                  <Font name="Montserrat Black" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="clientName" layoutX="13.0" layoutY="44.0" />
+            <Text layoutX="13.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF do Cliente">
+               <font>
+                  <Font name="Montserrat Regular" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="13.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Produtos">
+               <font>
+                  <Font name="Montserrat Regular" size="12.0" />
+               </font>
+            </Text>
+            <JFXComboBox fx:id="categoriesBox" layoutX="14.0" layoutY="103.0" onAction="#clickCategory" prefHeight="25.0" prefWidth="135.0" promptText="Categoria" />
+            <JFXComboBox fx:id="productBox" layoutX="14.0" layoutY="138.0" prefHeight="25.0" prefWidth="135.0" promptText="Selecione o produto" />
+            <JFXButton layoutX="37.0" layoutY="189.0" onMouseClicked="#clickProduct" text="ADICIONAR">
+               <font>
+                  <Font name="Montserrat Bold" size="12.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

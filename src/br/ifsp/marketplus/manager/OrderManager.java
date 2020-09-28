@@ -1,6 +1,7 @@
 package br.ifsp.marketplus.manager;
 
 import br.ifsp.marketplus.model.Order;
+import lombok.Getter;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,6 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 public class OrderManager {
 
+    @Getter
     private final Map<UUID, Order> orderMap = new HashMap<>();
 
     public void putOrder(UUID id, Order order) {

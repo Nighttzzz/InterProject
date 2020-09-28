@@ -15,20 +15,12 @@ import java.util.UUID;
 
 public class CategoryAdapter implements SQLAdapter<Category> {
 
-    private static final ProductAdapter PRODUCT_ADAPTER = new ProductAdapter();
-
     @Override
     public Category read(ResultSet set) throws SQLException {
         UUID id = UUID.fromString(set.getString("c_id"));
         String name = set.getString("c_name");
-        Set<Product> products = new HashSet<>();
 
-        //do {
-            products.add(PRODUCT_ADAPTER.read(set));
-            //set.next();
-        //} while (!set.isAfterLast());
-
-        return new Category(id, name, products);
+        return new Category(id, name, new HashSet<>());
     }
 
     @Override

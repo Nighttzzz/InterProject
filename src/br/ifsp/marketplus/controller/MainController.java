@@ -94,6 +94,19 @@ public class MainController {
 
     }
 
+    @FXML
+    void newOrderClick(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(Main.class.getResource("/br/ifsp/marketplus/views/order.fxml"));
+        Scene scene = new Scene(root);
+
+        Stage stage = new Stage();
+
+        stage.setResizable(false);
+        stage.setTitle("Nova compra");
+        stage.setScene(scene);
+        stage.show();
+    }
+
 
 
 }

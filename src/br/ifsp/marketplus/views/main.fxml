@@ -97,19 +97,9 @@
                   </Text>
                </children>
             </Pane>
-            <JFXButton fx:id="newOrderButton" graphicTextGap="5.0" layoutX="451.0" layoutY="512.0" onMouseClicked="#clickSet" ripplerFill="#009a40" style="-fx-background-color: #7bf179; -fx-background-radius: 5;" text="Nova Compra">
+            <JFXButton fx:id="newOrderButton" graphicTextGap="5.0" layoutX="451.0" layoutY="512.0" onMouseClicked="#newOrderClick" ripplerFill="#009a40" style="-fx-background-color: #7bf179; -fx-background-radius: 5;" text="Nova Compra">
                <font>
                   <Font name="Montserrat Bold" size="26.0" />
-               </font>
-            </JFXButton>
-            <JFXButton fx:id="ordersButton" graphicTextGap="5.0" layoutX="48.0" layoutY="515.0" onMouseClicked="#clickSet" ripplerFill="#976f00" style="-fx-background-color: #ffbb00; -fx-background-radius: 5;" text="Compras">
-               <font>
-                  <Font name="Montserrat Bold" size="24.0" />
-               </font>
-            </JFXButton>
-            <JFXButton fx:id="disccountsButton" graphicTextGap="5.0" layoutX="48.0" layoutY="454.0" onMouseClicked="#clickSet" ripplerFill="#976f00" style="-fx-background-color: #ffbb00; -fx-background-radius: 5;" text="Descontos">
-               <font>
-                  <Font name="Montserrat Bold" size="24.0" />
                </font>
             </JFXButton>
          </children>
