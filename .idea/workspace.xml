@@ -11,7 +11,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Finished Dao and Manager">
+      <change afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/controller/CategoriesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/controller/ClientController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/views/categories.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/views/clients.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ifsp/marketplus/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ifsp/marketplus/controller/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/controller/ProductsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ifsp/marketplus/initializer/Initializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/initializer/Initializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ifsp/marketplus/manager/ClientManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/manager/ClientManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ifsp/marketplus/manager/OrderManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/manager/OrderManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ifsp/marketplus/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/model/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ifsp/marketplus/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/model/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ifsp/marketplus/storage/category/CategoryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/storage/category/CategoryAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ifsp/marketplus/storage/category/CategoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/storage/category/CategoryDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ifsp/marketplus/storage/client/ClientAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/storage/client/ClientAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ifsp/marketplus/storage/client/ClientDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/storage/client/ClientDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ifsp/marketplus/storage/order/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/storage/order/OrderDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ifsp/marketplus/storage/product/ProductAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/storage/product/ProductAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ifsp/marketplus/views/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/views/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ifsp/marketplus/views/products.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ifsp/marketplus/views/products.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +118,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../springshop/springshop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/br/ifsp/marketplus/views" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -108,17 +127,18 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\kaue\IdeaProjects\projeto do luper\src\br\ifsp\marketplus\storage\order" />
-      <recent name="C:\Users\kaue\IdeaProjects\projeto do luper\src\br\ifsp\marketplus\storage\client" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\Minecraft\Interdisciplinary Project\src\sample\views" />
+      <recent name="C:\Users\User\IdeaProjects\Minecraft\Interdisciplinary Project\src\sample" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="br.ifsp.marketplus.manager" />
       <recent name="br.ifsp.marketplus.dao.impl" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\User\IdeaProjects\Minecraft\Interdisciplinary Project\src\sample\views" />
-      <recent name="C:\Users\User\IdeaProjects\Minecraft\Interdisciplinary Project\src\sample" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\Minecraft\Interdisciplinary Project\src\br\ifsp\marketplus\views" />
+      <recent name="C:\Users\kaue\IdeaProjects\projeto do luper\src\br\ifsp\marketplus\storage\order" />
+      <recent name="C:\Users\kaue\IdeaProjects\projeto do luper\src\br\ifsp\marketplus\storage\client" />
     </key>
   </component>
   <component name="RunManager">
@@ -254,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601186363171</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Finished Dao and Manager">
+      <created>1601186718317</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1601186718317</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,44 +340,48 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="413" y="123" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1366.738@0.0.1366.738" timestamp="1600889862080" />
-    <state x="264" y="0" key="CommitChangelistDialog2" timestamp="1601186359627">
+    <state x="264" y="0" key="CommitChangelistDialog2" timestamp="1601186715243">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="264" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1601186359627" />
+    <state x="264" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1601186715243" />
     <state x="548" y="98" key="FileChooserDialogImpl" timestamp="1601088136028">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="548" y="98" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1601088136028" />
     <state x="631" y="316" key="FileChooserDialogImpl/0.0.1920.1040/-1366.0.1366.728@0.0.1920.1040" timestamp="1601053953721" />
-    <state width="1322" height="118" key="GridCell.Tab.0.bottom" timestamp="1601091081225">
+    <state width="1322" height="181" key="GridCell.Tab.0.bottom" timestamp="1601326492829">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1322" height="118" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1601091081225" />
-    <state width="1322" height="118" key="GridCell.Tab.0.center" timestamp="1601091081225">
+    <state width="1322" height="181" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1601326492829" />
+    <state width="1322" height="181" key="GridCell.Tab.0.center" timestamp="1601326492829">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1322" height="118" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1601091081225" />
-    <state width="1322" height="118" key="GridCell.Tab.0.left" timestamp="1601091081225">
+    <state width="1322" height="181" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1601326492829" />
+    <state width="1322" height="181" key="GridCell.Tab.0.left" timestamp="1601326492829">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1322" height="118" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1601091081225" />
-    <state width="1322" height="118" key="GridCell.Tab.0.right" timestamp="1601091081225">
+    <state width="1322" height="181" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1601326492829" />
+    <state width="1322" height="181" key="GridCell.Tab.0.right" timestamp="1601326492829">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1322" height="118" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1601091081225" />
+    <state width="1322" height="181" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1601326492829" />
     <state x="181" y="0" key="SettingsEditor" timestamp="1601056047425">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="129" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1600988788200" />
     <state x="181" y="0" key="SettingsEditor/0.0.1920.1040/-1366.0.1366.728@0.0.1920.1040" timestamp="1601056047425" />
-    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1601186365661">
+    <state x="530" y="281" key="VCS.ChangelistChooser" timestamp="1601186736164">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1601186365661" />
-    <state x="490" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601062775880">
+    <state x="530" y="281" key="VCS.ChangelistChooser/0.0.1366.738@0.0.1366.738" timestamp="1601186736164" />
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1601186723952">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="490" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.738@0.0.1366.738" timestamp="1601062775880" />
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1601186723952" />
+    <state x="490" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601326561420">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="490" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.738@0.0.1366.738" timestamp="1601326561420" />
     <state x="0" y="0" width="136" height="100" key="net.trustx.simpleuml.components.BirdViewFrame" timestamp="1601009996051">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

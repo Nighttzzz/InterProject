@@ -28,7 +28,7 @@ public class ClientDao implements Dao<UUID, Client> {
             "id         CHAR(36) NOT NULL PRIMARY KEY, " +
             "name       VARCHAR(80) NOT NULL, " +
             "email      VARCHAR(80) NOT NULL, " +
-            "cpf        INT(9) NOT NULL, " +
+            "cpf        LONG NOT NULL, " +
             "created_at LONG NOT NULL);"
         )) {
             statement.executeUpdate();

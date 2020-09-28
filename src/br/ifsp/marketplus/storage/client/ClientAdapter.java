@@ -17,7 +17,7 @@ public class ClientAdapter implements SQLAdapter<Client> {
         String name = set.getString("name");
         String email = set.getString("email");
 
-        int cpf = set.getInt("cpf");
+        long cpf = set.getLong("cpf");
 
         long createdAt = set.getLong("created_at");
 
@@ -31,7 +31,7 @@ public class ClientAdapter implements SQLAdapter<Client> {
         statement.setString(2, client.getName());
         statement.setString(3, client.getEmail());
 
-        statement.setInt(4, client.getCpf());
+        statement.setLong(4, client.getCpf());
         statement.setLong(5, client.getCreatedAt());
     }
 

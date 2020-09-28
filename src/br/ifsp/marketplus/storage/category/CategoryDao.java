@@ -80,7 +80,8 @@ public class CategoryDao implements Dao<UUID, Category> {
             ResultSet resultSet = statement.executeQuery();
 
             while (resultSet.next()) {
-                categories.add(adapter.read(resultSet));
+                Category category = adapter.read(resultSet);
+                categories.add(category);
             }
 
         } catch (SQLException e) {

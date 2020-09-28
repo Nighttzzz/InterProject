@@ -12,7 +12,7 @@ public class Client {
     private final String name;
     private final String email;
 
-    private final int cpf;
+    private final long cpf;
 
     private final long createdAt;
 }

@@ -40,7 +40,7 @@ public class ClientManager implements Manager<Client> {
         return null;
     }
 
-    public Client findByCpf(int cpf) {
+    public Client findByCpf(long cpf) {
         if (clients.isEmpty()) return null;
 
         for (Client client : clients) {

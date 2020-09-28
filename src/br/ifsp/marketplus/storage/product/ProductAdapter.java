@@ -26,16 +26,16 @@ public class ProductAdapter implements SQLAdapter<Product> {
     @Override
     public void insert(PreparedStatement statement, Product product) throws SQLException {
         statement.setString(1, product.getId().toString());
-        statement.setString(2, product.getName());
-        statement.setDouble(3, product.getPrice());
-        statement.setDouble(4, product.getDiscount());
+        statement.setString(2, product.getCategoryId().toString());
+        statement.setString(3, product.getName());
 
-        statement.setDouble(5, product.getPrice());
-        statement.setDouble(6, product.getDiscount());
+        statement.setDouble(4, product.getPrice());
+        statement.setDouble(5, product.getDiscount());
     }
 
     @Override
     public void delete(PreparedStatement statement, Product object) throws SQLException {
         statement.setString(1, object.getId().toString());
     }
+
 }

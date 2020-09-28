@@ -1,5 +1,6 @@
 package br.ifsp.marketplus.storage.category;
 
+import br.ifsp.marketplus.manager.CategoryManager;
 import br.ifsp.marketplus.model.Category;
 import br.ifsp.marketplus.model.Product;
 import br.ifsp.marketplus.storage.SQLAdapter;
@@ -22,10 +23,10 @@ public class CategoryAdapter implements SQLAdapter<Category> {
         String name = set.getString("c_name");
         Set<Product> products = new HashSet<>();
 
-        do {
+        //do {
             products.add(PRODUCT_ADAPTER.read(set));
-            set.next();
-        } while (!set.isAfterLast());
+            //set.next();
+        //} while (!set.isAfterLast());
 
         return new Category(id, name, products);
     }

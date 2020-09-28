@@ -41,10 +41,12 @@ public class Initializer {
         categoryDao.createTable();
 
         clientDao = new ClientDao(connection);
+        clientDao.createTable();
 
         orderDao = new OrderDao(connection);
-        orderManager = new OrderManager();
+        orderDao.createTable();
 
+        orderManager = new OrderManager();
         productManager = new ProductManager(this);
         categoryManager = new CategoryManager(this);
         clientManager = new ClientManager(this);

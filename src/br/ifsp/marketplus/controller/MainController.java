@@ -19,7 +19,6 @@ import java.text.DecimalFormat;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
-@RequiredArgsConstructor
 public class MainController {
 
     @FXML
@@ -54,14 +53,36 @@ public class MainController {
     }
 
     @FXML
+    void categoryClick(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(Main.class.getResource("/br/ifsp/marketplus/views/categories.fxml"));
+        Scene scene = new Scene(root);
+
+        Stage stage = new Stage();
+
+        stage.setResizable(false);
+        stage.setTitle("Categorias");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    void clientClick(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(Main.class.getResource("/br/ifsp/marketplus/views/clients.fxml"));
+        Scene scene = new Scene(root);
+
+        Stage stage = new Stage();
+
+        stage.setResizable(false);
+        stage.setTitle("Clientes");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
     void clickSet(MouseEvent event) {
         DecimalFormat decimalFormat = new DecimalFormat("#,###.##");
 
         OrderManager orderManager = Main.getInitializer().getOrderManager();
-
-        orderManager.putOrder(UUID.randomUUID(), new Order(null, null, 111, System.currentTimeMillis(), null));
-        orderManager.putOrder(UUID.randomUUID(), new Order(null, null, 9999999999999999999D, 0, null));
-
 
         double daily = orderManager.sumLastOrders(TimeUnit.DAYS, 1);
         double weekly = orderManager.sumLastOrders(TimeUnit.DAYS, 7);
