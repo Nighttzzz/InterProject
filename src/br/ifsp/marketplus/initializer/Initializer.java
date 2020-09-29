@@ -4,6 +4,8 @@ import br.ifsp.marketplus.manager.CategoryManager;
 import br.ifsp.marketplus.manager.ClientManager;
 import br.ifsp.marketplus.manager.OrderManager;
 import br.ifsp.marketplus.model.Category;
+import br.ifsp.marketplus.model.Client;
+import br.ifsp.marketplus.model.Order;
 import br.ifsp.marketplus.model.Product;
 import br.ifsp.marketplus.storage.category.CategoryDao;
 import br.ifsp.marketplus.storage.client.ClientDao;
@@ -51,10 +53,16 @@ public class Initializer {
         categoryManager = new CategoryManager(this);
         clientManager = new ClientManager(this);
 
+        for (Order order : orderDao.getAll()) {
+            orderManager.putOrder(order.getId(), order);
+        }
+
         categoryManager.getCategories().addAll(getCategoryDao().getAll());
+
         for (Category category : categoryDao.getAll()) {
             productManager.getProducts().addAll(category.getProducts());
         }
+
         clientManager.getClients().addAll(clientDao.getAll());
 
     }

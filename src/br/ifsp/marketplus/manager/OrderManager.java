@@ -22,7 +22,7 @@ public class OrderManager {
     }
 
     public double sumLastOrders(TimeUnit unit, long value) {
-        long l = System.currentTimeMillis() + unit.toMillis(value);
+        long l = System.currentTimeMillis() - unit.toMillis(value);
         double totalPrice = 0;
 
         for (Order order : orderMap.values()) {

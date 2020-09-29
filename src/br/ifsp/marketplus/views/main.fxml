@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ifsp.marketplus.controller.MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#refreshEarnings" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ifsp.marketplus.controller.MainController">
    <children>
       <AnchorPane prefHeight="600.0" prefWidth="200.0">
          <children>
@@ -53,7 +53,7 @@
                </children></Pane>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="200.0" prefHeight="600.0" prefWidth="701.0">
+      <AnchorPane layoutX="200.0" onMouseEntered="#refreshEarnings" prefHeight="600.0" prefWidth="701.0">
          <children>
             <Pane layoutX="39.0" layoutY="33.0" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #96D1FF; -fx-background-radius: 15;" AnchorPane.rightAnchor="462.0">
                <children>

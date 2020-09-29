@@ -79,7 +79,7 @@ public class MainController {
     }
 
     @FXML
-    void clickSet(MouseEvent event) {
+    void refreshEarnings(MouseEvent event) {
         DecimalFormat decimalFormat = new DecimalFormat("#,###.##");
 
         OrderManager orderManager = Main.getInitializer().getOrderManager();
@@ -91,7 +91,6 @@ public class MainController {
         dailyEarning.setText("R$ " + decimalFormat.format(daily));
         weeklyEarning.setText("R$ " + decimalFormat.format(weekly));
         monthlyEarning.setText("R$ " + decimalFormat.format(monthly));
-
     }
 
     @FXML

@@ -1,6 +1,7 @@
 package br.ifsp.marketplus.controller;
 
 import br.ifsp.marketplus.Main;
+import br.ifsp.marketplus.initializer.Initializer;
 import br.ifsp.marketplus.manager.CategoryManager;
 import br.ifsp.marketplus.manager.ClientManager;
 import br.ifsp.marketplus.manager.ProductManager;
@@ -19,6 +20,8 @@ import java.util.UUID;
 
 public class ClientController {
 
+    private Initializer initializer = Main.getInitializer();
+
     @FXML
     private JFXListView<String> clientList;
 
@@ -33,7 +36,7 @@ public class ClientController {
 
     @FXML
     void createClient(MouseEvent event) {
-        ClientManager clientManager = Main.getInitializer().getClientManager();
+        ClientManager clientManager = initializer.getClientManager();
         List<Client> clients = clientManager.getClients();
 
         String name = clientName.getCharacters().toString();
@@ -47,7 +50,7 @@ public class ClientController {
 
         clients.add(client);
 
-        Main.getInitializer().getClientDao().insertOrUpdate(client.getId(), client);
+        initializer.getClientDao().insertOrUpdate(client.getId(), client);
 
         refreshClientListView();
     }
@@ -58,7 +61,7 @@ public class ClientController {
     }
 
     private void refreshClientListView() {
-        ClientManager clientManager = Main.getInitializer().getClientManager();
+        ClientManager clientManager = initializer.getClientManager();
         List<Client> clients = clientManager.getClients();
 
         ObservableList<String> items = FXCollections.observableArrayList();

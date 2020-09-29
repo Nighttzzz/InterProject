@@ -1,10 +1,15 @@
 package br.ifsp.marketplus.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.UUID;
 
-@Data
+@Getter
+@Setter
+@AllArgsConstructor
 public class Client {
 
     private final UUID id;

@@ -2,6 +2,7 @@ package br.ifsp.marketplus.controller;
 
 
 import br.ifsp.marketplus.Main;
+import br.ifsp.marketplus.initializer.Initializer;
 import br.ifsp.marketplus.manager.ProductManager;
 import br.ifsp.marketplus.model.Category;
 import br.ifsp.marketplus.model.Product;
@@ -19,6 +20,8 @@ import java.util.UUID;
 
 public class ProductsController {
 
+    private Initializer initializer = Main.getInitializer();
+
     @FXML
     private JFXTextField productName;
     @FXML
@@ -30,7 +33,7 @@ public class ProductsController {
 
     @FXML
     void refreshCategories(MouseEvent event) {
-        List<Category> categories = Main.getInitializer().getCategoryManager().getCategories();
+        List<Category> categories = initializer.getCategoryManager().getCategories();
 
         ObservableList<String> items = FXCollections.observableArrayList();
         for (Category category : categories) {
@@ -48,7 +51,7 @@ public class ProductsController {
 
     @FXML
     void createProduct(MouseEvent event) {
-        ProductManager productManager = Main.getInitializer().getProductManager();
+        ProductManager productManager = initializer.getProductManager();
         List<Product> products = productManager.getProducts();
 
         String name = productName.getCharacters().toString();
@@ -60,19 +63,19 @@ public class ProductsController {
 
         double price = Double.parseDouble(rawPrice);
 
-        Category categoryByName = Main.getInitializer().getCategoryManager().findByName(category);
+        Category categoryByName = initializer.getCategoryManager().findByName(category);
         if (categoryByName == null) return;
 
         Product product = new Product(UUID.randomUUID(), categoryByName.getId(), name, price, 0);
         products.add(product);
 
-        Main.getInitializer().getProductDao().insertOrUpdate(product.getId(), product);
+        initializer.getProductDao().insertOrUpdate(product.getId(), product);
 
         refreshProductListView();
     }
 
     private void refreshProductListView() {
-        ProductManager productManager = Main.getInitializer().getProductManager();
+        ProductManager productManager = initializer.getProductManager();
         List<Product> products = productManager.getProducts();
 
         ObservableList<String> items = FXCollections.observableArrayList();

@@ -21,6 +21,7 @@ import java.util.*;
 
 public class OrderController {
 
+    private Initializer initializer = Main.getInitializer();
     private List<Product> productArrayList = new ArrayList<>();
 
     @FXML
@@ -35,8 +36,6 @@ public class OrderController {
     @FXML
     void clickCategory(ActionEvent event) {
         String categoryList = categoriesBox.getValue();
-
-        Initializer initializer = Main.getInitializer();
 
         Category category = initializer.getCategoryManager().findByName(categoryList);
         if (category == null) return;
@@ -53,19 +52,20 @@ public class OrderController {
     void clickProduct(MouseEvent event) {
         if (productBox.getValue() == null) return;
 
-        Product product = Main.getInitializer().getProductManager().findByName(productBox.getValue());
+        Product product = initializer.getProductManager().findByName(productBox.getValue());
         if (product == null) return;
 
         productArrayList.add(product);
 
         ObservableList<String> items = FXCollections.observableArrayList();
         for (Product products : productArrayList) {
-            items.add(products.getName());
+            items.add(products.getName() + " - R$" + products.getPrice());
         }
 
         orderList.setItems(items);
     }
 
+    @FXML
     Set<OrderProduct> createOrderProducts(UUID id) {
         Set<OrderProduct> orderProducts = new HashSet<>();
 
@@ -75,6 +75,7 @@ public class OrderController {
         return orderProducts;
     }
 
+    @FXML
     double getTotal() {
         double price = 0;
 
@@ -87,8 +88,6 @@ public class OrderController {
 
     @FXML
     void createOrder(MouseEvent event) {
-        Initializer initializer = Main.getInitializer();
-
         OrderManager orderManager = initializer.getOrderManager();
         Map<UUID, Order> orders = orderManager.getOrderMap();
 
@@ -98,10 +97,12 @@ public class OrderController {
         String categoryName = categoriesBox.getValue();
         Category category = initializer.getCategoryManager().findByName(categoryName);
 
-        if (name.length() == 0 || category != null) return;
+        if (client == null) return;
+        if (category == null) return;
 
         UUID uuid = UUID.randomUUID();
         Set<OrderProduct> orderProducts = createOrderProducts(uuid);
+
         if (orderProducts == null) return;
 
         Order order = new Order(uuid, client.getId(),
@@ -122,7 +123,7 @@ public class OrderController {
     }
 
     void refreshCategories() {
-        List<Category> categories = Main.getInitializer().getCategoryManager().getCategories();
+        List<Category> categories = initializer.getCategoryManager().getCategories();
 
         ObservableList<String> items = FXCollections.observableArrayList();
         for (Category category : categories) {
@@ -132,8 +133,9 @@ public class OrderController {
         categoriesBox.setItems(items);
     }
 
+    @FXML
     void refreshOrder() {
-        List<Category> categories = Main.getInitializer().getCategoryManager().getCategories();
+        List<Category> categories = initializer.getCategoryManager().getCategories();
 
         ObservableList<String> items = FXCollections.observableArrayList();
         for (Category category : categories) {

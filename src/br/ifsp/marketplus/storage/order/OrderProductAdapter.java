@@ -12,9 +12,9 @@ public class OrderProductAdapter implements SQLAdapter<OrderProduct> {
     
     @Override
     public OrderProduct read(ResultSet set) throws SQLException {
-        UUID productId = UUID.fromString(set.getString("product_id"));
-        UUID orderId = UUID.fromString(set.getString("order_id"));
-        int amount = set.getInt("amount");
+        UUID productId = UUID.fromString(set.getString("op_product_id"));
+        UUID orderId = UUID.fromString(set.getString("op_order_id"));
+        int amount = set.getInt("op_amount");
 
         return new OrderProduct(productId, orderId, amount);
     }

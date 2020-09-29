@@ -13,24 +13,16 @@ import java.util.UUID;
 
 public class OrderAdapter implements SQLAdapter<Order> {
 
-    private static final OrderProductAdapter PRODUCT_ADAPTER = new OrderProductAdapter();
 
     @Override
     public Order read(ResultSet set) throws SQLException {
-        UUID id = UUID.fromString(set.getString("id"));
-        UUID clientId = UUID.fromString(set.getString("client_id"));
+        UUID id = UUID.fromString(set.getString("o_id"));
+        UUID clientId = UUID.fromString(set.getString("o_client_id"));
 
-        double totalPrice = set.getDouble("total_price");
-        long emittedDate = set.getLong("emitted_date");
+        double totalPrice = set.getDouble("o_total_price");
+        long emittedDate = set.getLong("o_emitted_date");
 
-        Set<OrderProduct> products = new HashSet<>();
-
-        do {
-            products.add(PRODUCT_ADAPTER.read(set));
-            set.next();
-        } while (!set.isAfterLast());
-
-        return new Order(id, clientId, totalPrice, emittedDate, products);
+        return new Order(id, clientId, totalPrice, emittedDate, new HashSet<>());
     }
 
     @Override

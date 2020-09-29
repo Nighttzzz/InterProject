@@ -1,5 +1,6 @@
 package br.ifsp.marketplus.storage.order;
 
+import br.ifsp.marketplus.model.Category;
 import br.ifsp.marketplus.model.Order;
 import br.ifsp.marketplus.model.OrderProduct;
 import br.ifsp.marketplus.storage.Dao;
@@ -8,10 +9,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.UUID;
+import java.util.*;
 
 public class OrderDao implements Dao<UUID, Order> {
 
@@ -82,6 +80,7 @@ public class OrderDao implements Dao<UUID, Order> {
                 e.printStackTrace();
             }
         }
+
     }
 
     @Override
@@ -122,15 +121,27 @@ public class OrderDao implements Dao<UUID, Order> {
                     "orders.emitted_date AS o_emitted_date, " +
                     "order_products.product_id AS op_product_id, " +
                     "order_products.order_id AS op_order_id, " +
-                    "order_products.amount AS op_amount, " +
+                    "order_products.amount AS op_amount " +
                     "FROM `orders` " +
                     "INNER JOIN order_products ON orders.id = order_products.order_id;"
         )) {
             ResultSet resultSet = statement.executeQuery();
+            Map<UUID, Order> categoryMap = new HashMap<>();
 
             while (resultSet.next()) {
-                orders.add(adapter.read(resultSet));
+                UUID id = UUID.fromString(resultSet.getString("o_id"));
+                UUID clientId = UUID.fromString(resultSet.getString("o_client_id"));
+
+                double totalPrice = resultSet.getDouble("o_total_price");
+                long emittedDate = resultSet.getLong("o_emitted_date");
+
+                categoryMap.computeIfAbsent(
+                      id,
+                      $ -> new Order(id, clientId, totalPrice, emittedDate, new HashSet<>())
+                ).getProducts().add(productAdapter.read(resultSet));
             }
+
+            return new HashSet<>(categoryMap.values());
 
         } catch (SQLException e) {
             e.printStackTrace();

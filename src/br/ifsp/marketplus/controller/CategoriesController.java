@@ -1,6 +1,7 @@
 package br.ifsp.marketplus.controller;
 
 import br.ifsp.marketplus.Main;
+import br.ifsp.marketplus.initializer.Initializer;
 import br.ifsp.marketplus.manager.CategoryManager;
 import br.ifsp.marketplus.manager.ProductManager;
 import br.ifsp.marketplus.model.Category;
@@ -19,6 +20,8 @@ import java.util.UUID;
 
 public class CategoriesController {
 
+    private Initializer initializer = Main.getInitializer();
+
     @FXML
     private JFXListView<String> categoriesList;
     @FXML
@@ -31,7 +34,7 @@ public class CategoriesController {
 
     @FXML
     void createCategory(MouseEvent event) {
-        CategoryManager categoryManager = Main.getInitializer().getCategoryManager();
+        CategoryManager categoryManager = initializer.getCategoryManager();
         List<Category> categories = categoryManager.getCategories();
 
         String name = categoryName.getCharacters().toString();
@@ -42,13 +45,13 @@ public class CategoriesController {
 
         categories.add(category);
 
-        Main.getInitializer().getCategoryDao().insertOrUpdate(category.getId(), category);
+        initializer.getCategoryDao().insertOrUpdate(category.getId(), category);
 
         refreshCategoriesListView();
     }
 
     private void refreshCategoriesListView() {
-        CategoryManager categoryManager = Main.getInitializer().getCategoryManager();
+        CategoryManager categoryManager = initializer.getCategoryManager();
         List<Category> categories = categoryManager.getCategories();
 
         ObservableList<String> items = FXCollections.observableArrayList();
